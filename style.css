@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(90deg,hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+@font-face {
+  font-family: KSLight;
+  src: url(/Kumbh_Sans/KumbhSans-Light.ttf);
+}
+@font-face {
+  font-family: KSBold;
+  src: url(/Kumbh_Sans/KumbhSans-Bold.ttf);
+}
+@font-face {
+  font-family: KSRegular;
+  src: url(/Kumbh_Sans/KumbhSans-Regular.ttf);
+}
+main {
+  width: 95%;
+  margin: 120px auto 0 auto;
+  max-height: 80%;
+  /* border: 1px solid red; */
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 0 0 50px 0;
+}
+.desktop {
+  display: none;
+}
+h1 {
+  text-align: center;
+  font-family: KSBold;
+  padding-top: 30px;
+  font-weight: 900;
+  font-size: 3rem;
+}
+ul {
+  list-style: none;
+}
+li:first-child label {
+  border-top: none;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid  hsl(240, 5%, 91%);
+  border-bottom: 1px solid  hsl(240, 5%, 91%);
+  padding: 18px 0;
+  font-family: KSRegular;
+  color: hsl(238, 29%, 16%);
+  font-weight: 500;
+}
+/* label:nth-last-of-type(1) {
+  border-top: none;
+} */
+label img {
+  transition: transform 200ms ease-in;
+}
+.image-container {
+  background: url(/images/bg-pattern-mobile.svg) no-repeat top center/contain;
+  padding-bottom: 10px;
+}
+.image-container img {
+  width: 90%;
+  margin-top: -120px;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.accordion-container {
+  padding: 15px 30px;
+}
+.dropdown {
+  padding: 15px 0;
+  display:  none;
+  transform-origin: top;
+  font-weight: 400;
+  font-family: KSLight;
+  color: hsl(237, 12%, 33%);
+}
+#accordion-1:checked ~ label p,
+#accordion-2:checked ~ label p,
+#accordion-3:checked ~ label p,
+#accordion-4:checked ~ label p,
+#accordion-5:checked ~ label p {
+  font-family: KSBold;
+}
+#accordion-1:checked ~ label img, 
+#accordion-2:checked ~ label img,
+#accordion-3:checked ~ label img,
+#accordion-4:checked ~ label img,
+#accordion-5:checked ~ label img {
+  transform: rotate(180deg);
+}
+#accordion-1:checked ~ .dropdown,
+#accordion-2:checked ~ .dropdown,
+#accordion-3:checked ~ .dropdown,
+#accordion-4:checked ~ .dropdown,
+#accordion-5:checked ~ .dropdown {
+  display: block;
+}
+@media screen and (min-width: 850px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  main {
+    overflow: hidden;
+    width: 60%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+  }
+  .desktop {
+    display: block;
+    
+  }
+  .image-container img {
+    margin: 30px 0 0 -40px;
+  }
+  .image-container {
+    background: url(/images/bg-pattern-desktop.svg) no-repeat top 5px left/contain;
+  }
+  .mobile {
+    display: none;
+  }
+}

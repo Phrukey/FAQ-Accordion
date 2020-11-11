@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
@@ -16,43 +17,70 @@
 </head>
 <body>
   <main>
-    <img src="/images/bg-pattern-mobile.svg" alt="Woman standing">
+    <div class="image-container">
+      <img src="/images/illustration-woman-online-mobile.svg" alt="Woman standing" class="mobile">
+      <img src="/images/illustration-woman-online-desktop.svg" alt="Woman standing" class="desktop">
+    </div>  
+    
     <div class="accordion-container">
+      <h1>FAQ</h1>
       <ul class="accordion">
-        <li>How many team members can I invite?
-          You can invite up to 2 additional users on the Free plan. There is no limit on 
-          team members for the Premium plan.
+        <li><input type="checkbox" name="accordion-1" id="accordion-1">
+        <label for="accordion-1">
+          <p>How many team members can I invite?</p>
+          <img src="/images/icon-arrow-down.svg" alt="arrow down icon" >
+        </label> 
+          <p class="dropdown">
+            You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
+          </p> 
         </li>
 
         <li>
-          What is the maximum file upload size?
-          No more than 2GB. All files in your account must fit your allotted storage space.
-        </li>
-         
-        <li>
-          How do I reset my password?
-          Click “Forgot password” from the login page or “Change password” from your profile page.
-          A reset link will be emailed to you.
-        </li>
-         
-        <li>
-          Can I cancel my subscription?
-          Yes! Send us a message and we’ll process your request no questions asked.
+          <input type="checkbox" name="accordion-2" id="accordion-2">
+          <label for="accordion-2">
+            <p>What is the maximum file upload size?</p>
+            <img src="/images/icon-arrow-down.svg" alt="arrow down icon" >
+          </label>
+          <p class="dropdown">
+            No more than 2GB. All files in your account must fit your allotted storage space.
+          </p>
         </li>
         
         <li>
-          Do you provide additional support?
-          Chat and email support is available 24/7. Phone lines are open during normal business hours.
+          <input type="checkbox" name="accordion-3" id="accordion-3">
+          <label for="accordion-3">
+            <p>How do I reset my password?</p>
+            <img src="/images/icon-arrow-down.svg" alt="arrow down icon">
+          </label>     
+          <p class="dropdown">
+            Click “Forgot password” from the login page or “Change password” from your profile page.
+          A reset link will be emailed to you.
+          </p>         
         </li>
-      </ul>
+        
+        <li>
+          <input type="checkbox" name="accordion-4" id="accordion-4">
+          <label for="accordion-4">
+            <p>Can I cancel my subscription?</p>
+            <img src="/images/icon-arrow-down.svg" alt="arrow down icon" >
+          </label>
+          <p class="dropdown">
+            Yes! Send us a message and we’ll process your request no questions asked.
+          </p>
+        </li>
+        
+        <li>
+          <input type="checkbox" name="accordion-5" id="accordion-5">
+          <label for="accordion-5">
+            <p>Do you provide additional support?</p>
+            <img src="/images/icon-arrow-down.svg" alt="arrow down icon" >
+          </label>
+          <p class="dropdown">
+            Do you provide additional support? Chat and email support is available 24/7. Phone lines are open during normal business hours.
+          </p>
+        </li>
+      </ul> 
     </div>
-    
   </main>
- 
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
